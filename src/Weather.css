@@ -1,0 +1,29 @@
+.image{
+    display: block;
+margin: 0 auto;
+}
+.wrapper{
+   border: 1px solid #dadde1;
+   padding: 10px;
+   
+}
+.temperature{
+    font-size: 45px;
+   
+    
+}
+.city{
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.date{
+    text-align: center;
+    font-size: 15px;
+
+}
+.form{
+   
+}
