@@ -23,15 +23,15 @@ export default function Weather (){
             </div>
           </div>
         </form>
-
-        <h1 className="city">New York</h1>
-        <p className="date">Tue, 6:00</p>
-        <img
-          src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="mostly cloudy"
-          className="image"
-        />
-        
+        <div className="info">
+          <h1 className="city">New York</h1>
+          <p className="date">Tue, 6:00</p>
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="mostly cloudy"
+            className="image"
+          />
+        </div>
         <div className="row">
           <div className="col-6">
             <span className="temperature">7</span>

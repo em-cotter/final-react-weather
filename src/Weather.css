@@ -1,7 +1,11 @@
 li{
     list-style-type: none;
     position: relative;
-left:20px
+left:25px
+}
+.info{
+position:relative;
+bottom: -30px;
 }
 .row{
     text-align: center;
@@ -9,8 +13,11 @@ left:20px
 }
 .image{
     display: block;
+     
 margin: 0 auto;
-size: 20px
+height: 90px;
+
+
 }
 .wrapper{
    border: 1px solid #dadde1;
@@ -34,13 +41,14 @@ size: 20px
 .city{
     text-align: center;
     font-size: 50px;
-    padding: 10px;
+    padding: 0px;
     padding-bottom: 0px;
 }
 
 .date{
     text-align: center;
     font-size: 15px;
+    
 
 }
 .form{
