@@ -5,22 +5,25 @@ import './Weather.css'
 
 export default function Weather (){
 
-  const[weatherData, setWeatherData]= useState({});
-   const [ready, setReady]= useState(false)
+  const[weatherData, setWeatherData]= useState({ready: false});
+  
 
   function handleResponse(response){
     console.log(response.data)
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       city: response.data.name,
       humidity: response.data.main.humidity,
      tempMax: response.data.main.temp_max,
      tempMin: response.data.main.temp_min,
+     description: response.data.weather[0].description,
+     date: "Tue, 6:00pm"
     })
-    setReady(true);
+    
   }
 
-  if (ready){
+  if (weatherData.ready){
     return (
       <div className="wrapper">
         <form>
@@ -44,16 +47,19 @@ export default function Weather (){
         </form>
         <div className="info">
           <h1 className="city">{weatherData.city}</h1>
-          <p className="date">Tue, 6:00</p>
+          <p className="date">{weatherData.date}</p>
+          <div className="text-capitalize description">{weatherData.description}</div>
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="mostly cloudy"
+            alt={weatherData.description}
             className="image"
           />
         </div>
         <div className="row">
           <div className="col-6">
-            <span className="temperature">{Math.round(weatherData.temperature)}</span>
+            <span className="temperature">
+              {Math.round(weatherData.temperature)}
+            </span>
             <span className="unit">°C</span>
           </div>
           <div className="col-6">
