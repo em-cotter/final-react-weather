@@ -5,12 +5,18 @@ import './Weather.css'
 
 export default function Weather (){
 
-  const[temp, setTemp]= useState(null);
+  const[weatherData, setWeatherData]= useState({});
    const [ready, setReady]= useState(false)
 
   function handleResponse(response){
-    console.log(response.data.main)
-    setTemp(Math.round(response.data.main.temp))
+    console.log(response.data)
+    setWeatherData({
+      temperature: response.data.main.temp,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+     tempMax: response.data.main.temp_max,
+     tempMin: response.data.main.temp_min,
+    })
     setReady(true);
   }
 
@@ -37,7 +43,7 @@ export default function Weather (){
           </div>
         </form>
         <div className="info">
-          <h1 className="city">New York</h1>
+          <h1 className="city">{weatherData.city}</h1>
           <p className="date">Tue, 6:00</p>
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
@@ -47,14 +53,14 @@ export default function Weather (){
         </div>
         <div className="row">
           <div className="col-6">
-            <span className="temperature">{temp}</span>
+            <span className="temperature">{Math.round(weatherData.temperature)}</span>
             <span className="unit">°C</span>
           </div>
           <div className="col-6">
             <ul>
-              <li>Wind: 15km/h</li>
-              <li>Humidity: 13%</li>
-              <li>Mostly cloudy</li>
+              <li>High: {Math.round(weatherData.tempMax)}°C</li>
+              <li>Low: {Math.round(weatherData.tempMin)}°C</li>
+              <li>Humidity: {weatherData.humidity}%</li>
             </ul>
           </div>
         </div>
