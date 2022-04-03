@@ -2,13 +2,18 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 
 export default function WeatherInfo(props){
-    return (<div className="WeatherInfo">
-         <div className="info">
+    return (
+      <div className="WeatherInfo">
+        <div className="info">
           <h1 className="city">{props.data.city}</h1>
-          <p className="date"><FormattedDate date={props.data.date}/></p>
-          <div className="text-capitalize description">{props.data.description}</div>
+          <p className="date">
+            <FormattedDate date={props.data.date} />
+          </p>
+          <div className="text-capitalize description">
+            {props.data.description}
+          </div>
           <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            src={props.data.icon}
             alt={props.data.description}
             className="image"
           />
@@ -29,7 +34,6 @@ export default function WeatherInfo(props){
           </div>
         </div>
       </div>
-      
     );
     
 }
