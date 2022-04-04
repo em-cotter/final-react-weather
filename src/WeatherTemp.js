@@ -15,18 +15,30 @@ export default function WeatherTemp(props){
     if (unit==="celcius"){
     return (
       <div>
-        <span className="temperature">
-          {Math.round(props.celcius)}
+        <span className="temperature">{Math.round(props.celcius)}</span>
+        <span className="unit">
+          °C |{" "}
+          <a
+            href="https://www.shecodes.io/learn/workshops/579/units/22/challenges/174"
+            onClick={convertToFahrenheit}
+          >
+            °F
+          </a>
         </span>
-        <span className="unit">°C | <a href="" onClick={convertToFahrenheit}>°F</a></span>
       </div>
-    )}else{
+    );}else{
         let fahrenheit = (props.celcius * 9/5)+32 ;       return (
-      <div>
-        <span className="temperature">
-          {Math.round(fahrenheit)}
-        </span>
-        <span className="unit"><a href="" onClick={convertToCelcius}>°C</a> | °F</span>
-      </div>
-        )};
+          <div>
+            <span className="temperature">{Math.round(fahrenheit)}</span>
+            <span className="unit">
+              <a
+                href="https://www.shecodes.io/learn/workshops/579/units/22/challenges/174"
+                onClick={convertToCelcius}
+              >
+                °C
+              </a>{" "}
+              | °F
+            </span>
+          </div>
+        );};
 }
