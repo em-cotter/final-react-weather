@@ -1,8 +1,11 @@
 li{
     list-style-type: none;
+    float: left;
+    padding-right: 50px;
     position: relative;
-left:55px;
-top: 15px
+left:45px;
+top: 15px;
+
 }
 
 .description{
@@ -10,7 +13,7 @@ top: 15px
     font-weight: bold;
 }
 
-.row{
+.information{
     text-align: center;
     max-width: 500px;
   
@@ -19,20 +22,22 @@ top: 15px
     display: block;
      
 margin: 0 auto;
-height: 90px;
+height: 120px;
 
 
 }
 .wrapper{
-   border: 1px solid #dadde1;
+   border: 1px solid #6C757D;
+   border-radius: 3%;
    padding: 10px;
-   background: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-   
+   padding-bottom: 0px;
+   background: white;
+ 
 }
 .temperature{
     font-size: 70px;
    position: relative;
- left: 45px
+ left: 10px
  
    
     
@@ -41,7 +46,7 @@ height: 90px;
     font-size: 20px;
  position: relative;
  bottom: 30px;
- left:45px
+ left:10px
    
 }
 .city{
@@ -69,4 +74,24 @@ height: 90px;
 .btn-dark:hover{
     background-color:#757A79 !important;
     border-color: #757A79 !important;
+}
+
+
+.forecastBoxes{
+   
+    text-align: center;
+    max-width: 490px;
+   
+     font-size: 13px;
+
+     padding-top: 20px;
+     padding-bottom: 7px;
+    
+}
+.forecastBoxes:hover{
+    background-color: #f2efef ;
+    border-radius: 3%;
+}
+.forecastIcon{
+    height: 80px;
 }

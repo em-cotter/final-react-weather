@@ -19,13 +19,13 @@ export default function WeatherInfo(props){
             className="image"
           />
         </div>
-        <div className="row">
+        <div className="row information">
           <div className="col-6">
             <WeatherTemp celcius={props.data.temperature} />
            
           </div>
           <div className="col-6">
-            <ul>
+            <ul >
               <li>High: {Math.round(props.data.tempMax)}°C</li>
               <li>Low: {Math.round(props.data.tempMin)}°C</li>
               <li>Humidity: {props.data.humidity}%</li>
