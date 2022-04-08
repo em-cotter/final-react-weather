@@ -1,0 +1,18 @@
+.forecastBoxes{
+   
+    text-align: center;
+    max-width: 490px;
+   
+     font-size: 13px;
+
+     padding-top: 20px;
+     padding-bottom: 7px;
+    
+}
+.forecastBoxes:hover{
+    background-color: #f2efef ;
+    border-radius: 9%;
+}
+.forecastIcon{
+    height: 80px;
+}
