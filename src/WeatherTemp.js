@@ -16,7 +16,7 @@ export default function WeatherTemp(props){
     return (
       <div>
         <span className="temperature">{Math.round(props.celcius)}</span>
-        <span className="unit">
+        <span className="unit linkUnit">
           °C |{" "}
           <a
             href="https://www.shecodes.io/learn/workshops/579/units/22/challenges/174"

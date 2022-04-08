@@ -21,7 +21,8 @@ export default function Weather (props){
      tempMin: response.data.main.temp_min,
      description: response.data.weather[0].description,
      date: new Date(response.data.dt * 1000),
-     icon:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+     icon:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+     coords: response.data.coord
     });
   }
   
@@ -64,7 +65,7 @@ function search() {
           </div>
         </form>
         <WeatherInfo data={weatherData}/>
-        <Forecast />
+        <Forecast coordinates={weatherData.coords}/>
         </div>);
        
   } else{

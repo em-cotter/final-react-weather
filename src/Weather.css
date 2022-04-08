@@ -37,7 +37,8 @@ height: 120px;
 .temperature{
     font-size: 70px;
    position: relative;
- left: 10px
+ left: 10px;
+ 
  
    
     
@@ -62,9 +63,7 @@ height: 120px;
     
 
 }
-.form{
-   
-}
+
  .button{
    margin-top: 2px;
 
@@ -90,8 +89,9 @@ height: 120px;
 }
 .forecastBoxes:hover{
     background-color: #f2efef ;
-    border-radius: 3%;
+    border-radius: 9%;
 }
 .forecastIcon{
     height: 80px;
 }
+
