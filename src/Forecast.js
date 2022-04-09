@@ -1,15 +1,17 @@
 import axios from "axios";
 import React, {useState} from "react";
 import "./Forecast.css"
+import ForecastDay from "./ForecastDay.js"
 
 export default function Forecast(props){
   let [loaded, setLoaded]= useState(false)
   let[forecast, setForecast]= useState(null)
-  let iconUrl=`http://openweathermap.org/img/wn/${forecast[0].weather[0].icon}@2x.png`
+  
+
 function handelResponse(response){
 
-setForecast(response.data.daily)
-setLoaded(true)
+setForecast(response.data.daily);
+setLoaded(true);
 }
 
   
@@ -18,20 +20,12 @@ setLoaded(true)
       <div className="Forecast">
         <div className="row">
           <div className="col forecastBoxes">
-            <div className="ForecastDay">{forecast[0].dt}</div>
-            <div>
-              <img
-                src= {iconUrl}
-                alt="Icon"
-                className="forecastIcon"
-              />
-            </div>{" "}
-            <span> H:{Math.round(forecast[0].temp.max)}°</span>{" "}
-            <span>L:{Math.round(forecast[0].temp.min)}°</span>
+           <ForecastDay data={forecast[1]}/>
           </div>
         </div>
       </div>
-    );} else{
+    );
+  } else{
 let apiKey = "30b4b8df96ab8adabf4f389d73097df8";
 let latitude = props.coordinates.lat;
 let longitude= props.coordinates.lon
