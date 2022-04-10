@@ -1,44 +1,16 @@
-import React, {useState} from "react"
+import React from "react"
 
 
 export default function WeatherTemp(props){
-    const [unit, setUnit]= useState("celcius")
-    function convertToFahrenheit(event){
-        event.preventDefault();
-        setUnit("fahrenheit")
-        
-    }
-    function convertToCelcius(event){
-        event.preventDefault()
-        setUnit("celcius")
-    }
-    if (unit==="celcius"){
+   
+    
     return (
       <div>
         <span className="temperature">{Math.round(props.celcius)}</span>
         <span className="unit linkUnit">
-          °C |{" "}
-          <a
-            href="https://www.shecodes.io/learn/workshops/579/units/22/challenges/174"
-            onClick={convertToFahrenheit}
-          >
-            °F
-          </a>
+          °C 
+         
+         
         </span>
       </div>
-    )}else{
-        let fahrenheit = (props.celcius * 9/5)+32 ;       return (
-          <div>
-            <span className="temperature">{Math.round(fahrenheit)}</span>
-            <span className="unit">
-              <a
-                href="https://www.shecodes.io/learn/workshops/579/units/22/challenges/174"
-                onClick={convertToCelcius}
-              >
-                °C
-              </a>{" "}
-              | °F
-            </span>
-          </div>
-        );};
-}
+    )}
