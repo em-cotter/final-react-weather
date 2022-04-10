@@ -3,10 +3,11 @@ div.forecastBoxes{
     text-align: center;
     max-width: 490px;
    
-     font-size: 13px;
+     font-size: 17px;
 
      padding-top: 20px;
      padding-bottom: 7px;
+     font-weight: bold;
     
 }
 div.forecastBoxes:hover{
